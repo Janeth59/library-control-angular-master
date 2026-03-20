@@ -24,7 +24,7 @@ export class Home implements OnInit {
 
   getStockClass(stock: number): string {
     if (stock === 0) return 'text-danger fw-bold';
-    if (stock <= 3) return 'text-warning fw-bold';
+    if (stock <= 5) return 'text-warning fw-bold';
     return 'text-success';
   }
 }

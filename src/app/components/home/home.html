@@ -15,9 +15,8 @@
     <div class="col-md-4">
       <div class="card shadow-sm text-center">
         <div class="card-body py-4">
-          <i class="bi bi-box-seam fs-2 text-success"></i>
           <h2 class="mt-2 fw-bold">{{ totalStock }}</h2>
-          <p class="text-muted mb-0">Stock total disponible</p>
+          <p class="text-muted mb-0">Toatal existencias</p>
         </div>
       </div>
     </div>
@@ -25,9 +24,8 @@
     <div class="col-md-4">
       <div class="card shadow-sm text-center">
         <div class="card-body py-4">
-          <i class="bi bi-exclamation-triangle fs-2 text-danger"></i>
           <h2 class="mt-2 fw-bold">{{ alerts.length }}</h2>
-          <p class="text-muted mb-0">Alertas de inventario</p>
+          <p class="text-muted mb-0">Advertencias de inventario</p>
         </div>
       </div>
     </div>
@@ -36,19 +34,18 @@
 
   <div class="card shadow-sm">
     <div class="card-header bg-dark text-white d-flex align-items-center gap-2">
-      <i class="bi bi-exclamation-triangle-fill text-warning"></i>
-      <span>Libros con stock crítico</span>
+      <span>Libros casi agotados</span>
       <span class="badge bg-danger ms-auto">{{ alerts.length }} alertas</span>
     </div>
     <div class="card-body p-0">
       <div *ngIf="alerts.length === 0" class="text-center text-muted py-4">
         <i class="bi bi-check-circle fs-4 d-block mb-1 text-success"></i>
-        Todo en orden — sin alertas de inventario
+        Todo chdio ntp
       </div>
       <table *ngIf="alerts.length > 0" class="table table-hover mb-0">
         <thead class="table-dark">
           <tr>
-            <th>#Serie</th>
+            <th>Num Serie</th>
             <th>Título</th>
             <th>Autor</th>
             <th>Género</th>
@@ -60,7 +57,7 @@
             <td class="fw-semibold">{{ book.book_serie }}</td>
             <td>{{ book.title }}</td>
             <td>{{ book.author }}</td>
-            <td><span class="badge bg-secondary">{{ book.gender }}</span></td>
+            <td><span >{{ book.gender }}</span></td>
             <td [ngClass]="getStockClass(book.stock)">{{ book.stock }}</td>
           </tr>
         </tbody>

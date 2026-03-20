@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NgFor, NgClass } from '@angular/common';
+import { NgFor, NgClass, NgIf } from '@angular/common';
 import { BookService } from '../../services/book.service';
 import { Book } from '../../models/book.model';
 import { FormsModule } from '@angular/forms'
@@ -7,7 +7,7 @@ import { FormsModule } from '@angular/forms'
 @Component({
   selector: 'app-catalogue',
   standalone: true,
-  imports: [NgFor, NgClass, FormsModule],
+  imports: [NgFor, NgClass, FormsModule, NgIf],
   templateUrl: './catalogue.html',
 })
 export class Catalogue implements OnInit {
@@ -32,7 +32,7 @@ export class Catalogue implements OnInit {
 
   getStockClass(stock: number): string {
     if (stock === 0) return 'text-danger fw-bold';
-    if (stock <= 3) return 'text-warning fw-bold';
+    if (stock <= 5) return 'text-warning fw-bold';
     return 'text-success';
   }
 }
