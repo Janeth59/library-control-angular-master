@@ -3,11 +3,12 @@ import { Navbar } from './components/navbar/navbar';
 import { Form } from './components/form/form';
 import { Table } from './components/table/table';
 import { Book } from './models/book.model';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [Navbar, Form, Table],
+  imports: [RouterOutlet, Navbar],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

@@ -81,8 +81,8 @@ export class Table implements OnInit, OnDestroy {
 
   //obetner nuemro de libros por si las moscas hacen falta pedir mas
   getStockClass(stock: number): string {
-    if (stock === 0) return 'text-danger fw-bold';
-    if (stock <= 3) return 'text-warning fw-bold';
+    if (stock === 0) return 'text-danger fw-bold';//peligro
+    if (stock <= 5) return 'text-warning fw-bold';//aguas faltan mas
     return 'text-success';
   }
 }

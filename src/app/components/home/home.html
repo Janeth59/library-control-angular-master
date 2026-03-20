@@ -1,0 +1,61 @@
+<section class="section active" id="sec-inicio">
+  <div class="page-heading">
+    <h1>Panel de inicio</h1>
+    <p>Resumen general del inventario de la biblioteca</p>
+  </div>
+ 
+  <div class="cards-grid">
+    <div class="stat-card card-blue">
+      <div class="stat-card-top">
+        <div class="stat-label">Total de libros</div>
+        <div class="stat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+          </svg>
+        </div>
+      </div>
+      <div class="stat-value" id="kpi-total">0</div>
+      <div class="stat-note" id="kpi-total-note">títulos en el catálogo</div>
+    </div>
+ 
+    <div class="stat-card card-green">
+      <div class="stat-card-top">
+        <div class="stat-label">Stock total</div>
+        <div class="stat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/>
+          </svg>
+        </div>
+      </div>
+      <div class="stat-value" id="kpi-stock">0</div>
+      <div class="stat-note" id="kpi-stock-note">unidades disponibles en total</div>
+    </div>
+ 
+    <div class="stat-card card-alert">
+      <div class="stat-card-top">
+        <div class="stat-label">Alertas de inventario</div>
+        <div class="stat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+            <line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/>
+          </svg>
+        </div>
+      </div>
+      <div class="stat-value" id="kpi-alerts">0</div>
+      <div class="stat-note" id="kpi-alerts-note">libros con stock crítico (≤ 3)</div>
+    </div>
+  </div>
+ 
+  <div class="panel">
+    <div class="panel-header">
+      <div>
+        <h2>Libros con stock crítico</h2>
+        <p>Títulos que requieren reabastecimiento</p>
+      </div>
+      <span class="alert-badge" id="alert-badge">0 alertas</span>
+    </div>
+    <div id="alert-list">
+      <div class="empty-state">Sin alertas — inventario en buen estado ✓</div>
+    </div>
+  </div>
+</section>
